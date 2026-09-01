@@ -1,40 +1,36 @@
 # Orderbook-Master
 
-# High-Performance C++20 Limit Order Book
+A fast C++ limit order book that matches buyers and sellers in real time. Built over summer 2026 to practice C++20 and concurrent programming.
 
-A multithreaded, high-frequency limit order book engine built in C++20 that processes order submissions, modifications, cancellations, and order matching across price levels[cite: 4, 5, 6].
+## Overview
 
-## Visual Overview & Demo
+This engine simulates the core matching logic used by financial and crypto exchanges. It accepts buy and sell orders, sorts them by price and time, and instantly executes trades when prices overlap.
 
-![Orderbook Execution Demo](https://raw.githubusercontent.com/username/orderbook/main/assets/demo.gif)
+## Key Features
 
-* **Live Interactive Demo**: [Orderbook Engine Sandbox](https://github.com/username/orderbook-demo)[cite: 3]
-* **Build Status**: Compiled and verified under MSVC Toolset `v143` (Visual Studio 2022).
+* **Real-Time Order Matching:** Pairs the highest buy offers with the lowest sell offers.
+* **Price-Time Priority:** Uses a "first-come, first-served" rule for orders placed at the exact same price.
+* **Flexible Order Types:**
+  * **Market Order:** Executes immediately at the best available current price.
+  * **Good 'Til Cancel (GTC):** Remains open until manually canceled.
+  * **Fill and Kill (FAK):** Fills as much as possible right now and deletes any leftover amount.
+  * **Fill or Kill (FOK):** Fills the entire order immediately or cancels the whole thing.
+  * **Good For Day (GFD):** Remains active throughout the session and automatically expires at market close (4:00 PM).
+* **Background Housecleaning:** A background thread tracks the clock and automatically purges expired GFD orders at 4:00 PM without interrupting live trading.
+* **Thread-Safe Operations:** Uses mutex locks and atomic flags so multiple threads can process incoming trades safely without race conditions or memory crashes.
 
-## Technical Stack
+## Tech Stack
 
-| Component | Technology / Feature | Description |
+| Component | Technology | Role |
 | :--- | :--- | :--- |
-| **Language Standard** | C++20 (`stdcpp20`) | Employs standard libraries including `<format>`, `<chrono>`, dynamic pointers, and atomic flags[cite: 4, 5, 8]. |
-| **Build System** | MSVC / Visual Studio 2022 | Configured for `x86` and `x64` architectures in Debug/Release modes[cite: 7, 8]. |
-| **Concurrency** | `<thread>`, `<mutex>`, `<condition_variable>` | Multithreaded safety with asynchronous background order pruning[cite: 5, 6]. |
-| **Data Structures** | `std::map`, `std::unordered_map`, `std::list` | Priority price levels using sorted maps and constant-time order iterators[cite: 4, 6]. |
+| **Language Standard** | C++20 | Leverages `<format>`, `<chrono>`, smart pointers, and atomic flags. |
+| **Build System** | MSVC (Visual Studio 2022) | Configured for `x86` / `x64` architectures in Debug/Release modes. |
+| **Concurrency** | Threads & Locks | Utilizes `std::thread`, `std::scoped_lock`, and `std::condition_variable`. |
+| **Data Structures** | Maps & Lists | Fast priority matching via `std::map`, `std::unordered_map`, and `std::list`. |
 
-## Key Engineering Challenges Solved
+## How It Works
 
-* **Order Types & Execution Logic**: Implemented support for Market, GoodTillCancel (GTC), FillAndKill (FAK), FillOrKill (FOK), and GoodForDay (GFD) orders[cite: 4, 5]. Market orders automatically adjust to GTC orders based on worst available price limits[cite: 4, 5].
-* **Asynchronous EOD Order Pruning**: Integrated a background thread (`PruneGoodForDayOrders`) that calculates time remaining until end-of-day (16:00)[cite: 5, 6]. It uses `std::condition_variable::wait_for` to wake up and prune active GFD orders without impeding main matching operations[cite: 5].
-* **Price-Time Priority Matching**: Utilized `std::greater` for descending Bids and `std::less` for ascending Asks[cite: 6]. An auxiliary map (`data_`) tracks aggregate volumes and level order counts dynamically[cite: 5, 6].
-* **Thread Safety & Graceful Shutdown**: Protected order state operations using `std::scoped_lock` and standard mutexes[cite: 5, 6]. Designed RAII destruction to signal threads via atomic `shutdown_` flags and join background processes cleanly[cite: 5, 6].
-
-## Running the Code Locally
-
-### Prerequisites
-* Windows OS with Visual Studio 2022 installed[cite: 7, 8].
-* C++20 Desktop Development Workload[cite: 8].
-
-### Build Instructions
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/username/orderbook.git](https://github.com/username/orderbook.git)
-   cd orderbook
+1. **Order Intake:** Incoming orders enter the system and get categorized by buy (bid) or sell (ask).
+2. **Priority Sorting:** Bids are sorted highest-to-lowest, while Asks are sorted lowest-to-highest.
+3. **Execution:** The engine checks if the top buy price meets or exceeds the top sell price. If matched, trades execute instantly.
+4. **Async Pruning:** A dedicated thread waits until 16:00 to remove expired GFD orders without locking down the main matching engine.
