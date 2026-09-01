@@ -1,6 +1,6 @@
 # Orderbook-Master
 
-A fast C++ limit order book that matches buyers and sellers in real time. Built over summer 2026 to practice C++20 and concurrent programming.
+A fast C++ limit order book that matches buyers and sellers in real time. Built over summer 2026 to practice C++.
 
 ## Overview
 
