@@ -1,0 +1,48 @@
+﻿  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(154,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(164,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\atomic(93,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\atomic(291,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\atomic(307,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(55,13): warning C4820: 'Order': '4' bytes padding added after data member 'Order::orderType_'
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderModify.h(30,1): warning C4820: 'OrderModify': '4' bytes padding added after data member 'OrderModify::quantity_'
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Orderbook.h(76,1): warning C4820: 'Orderbook': '7' bytes padding added after data member 'Orderbook::shutdown_'
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(25,5): warning C4514: 'Order::Order': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(30,10): warning C4514: 'Order::GetSide': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(31,11): warning C4514: 'Order::GetPrice': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(35,14): warning C4514: 'Order::GetFilledQuantity': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(36,10): warning C4514: 'Order::IsFilled': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(37,10): warning C4514: 'Order::Fill': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(44,10): warning C4514: 'Order::ToGoodTillCancel': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderModify.h(8,5): warning C4514: 'OrderModify::OrderModify': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderModify.h(20,18): warning C4514: 'OrderModify::ToOrderPointer': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderbookLevelInfos.h(8,5): warning C4514: 'OrderbookLevelInfos::OrderbookLevelInfos': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderbookLevelInfos.h(13,23): warning C4514: 'OrderbookLevelInfos::GetBids': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderbookLevelInfos.h(14,23): warning C4514: 'OrderbookLevelInfos::GetAsks': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Trade.h(8,5): warning C4514: 'Trade::Trade': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Trade.h(13,22): warning C4514: 'Trade::GetBidTrade': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Trade.h(14,22): warning C4514: 'Trade::GetAskTrade': unreferenced inline function has been removed
+  Orderbook.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(154,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xmemory(164,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\atomic(93,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\atomic(291,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\atomic(307,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(55,13): warning C4820: 'Order': '4' bytes padding added after data member 'Order::orderType_'
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderModify.h(30,1): warning C4820: 'OrderModify': '4' bytes padding added after data member 'OrderModify::quantity_'
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Orderbook.h(76,1): warning C4820: 'Orderbook': '7' bytes padding added after data member 'Orderbook::shutdown_'
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Orderbook.cpp(44,25): warning C4456: declaration of '_' hides previous local declaration
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Orderbook.cpp(42,22): message : see declaration of '_'
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Orderbook.cpp(264,80): warning C4355: 'this': used in base member initializer list
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(25,5): warning C4514: 'Order::Order': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(35,14): warning C4514: 'Order::GetFilledQuantity': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderModify.h(8,5): warning C4514: 'OrderModify::OrderModify': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderbookLevelInfos.h(13,23): warning C4514: 'OrderbookLevelInfos::GetBids': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\OrderbookLevelInfos.h(14,23): warning C4514: 'OrderbookLevelInfos::GetAsks': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Trade.h(13,22): warning C4514: 'Trade::GetBidTrade': unreferenced inline function has been removed
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Trade.h(14,22): warning C4514: 'Trade::GetAskTrade': unreferenced inline function has been removed
+  Generating Code...
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(40): warning C5045: Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(39): message : index '' range checked by comparison on this line
+C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\Order.h(40): message : feeds call on this line
+  Orderbook.vcxproj -> C:\Users\Aaron\OneDrive\Documents\Coding\Finished Projects (GIT)\Orderbook-master Fin\x64\Debug\Orderbook.exe
